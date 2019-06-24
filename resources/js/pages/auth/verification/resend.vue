@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="col-lg-8 m-auto">
+  <div class="container mx-auto h-full flex justify-center items-center">
+    <div class="md:w-1/2">
       <card :title="$t('verify_email')">
         <form @submit.prevent="send" @keydown="form.onKeydown($event)">
           <alert-success :form="form" :message="status" />

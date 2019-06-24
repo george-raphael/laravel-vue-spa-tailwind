@@ -1,8 +1,24 @@
 @import 'variables';
-@import '~bootstrap/scss/bootstrap';
 @import '~sweetalert2/src/sweetalert2';
 
-@import 'elements/card';
-@import 'elements/navbar';
-@import 'elements/buttons';
+@import url('https://fonts.googleapis.com/css?family=Ruda|Roboto+Slab');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'tailwind/buttons';
+@import 'tailwind/nav';
 @import 'elements/transitions';
+
+@screen md {
+  form {
+    .form-group {
+      @apply flex items-center;
+    }
+  }
+}
+
+label {
+  @apply text-gray-700 font-bold mb-2;
+}

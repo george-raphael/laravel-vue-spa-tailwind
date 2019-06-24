@@ -1,53 +1,47 @@
 <template>
-  <div class="row">
-    <div class="col-lg-8 m-auto">
-      <card :title="$t('login')">
+  <div class="container mx-auto h-full flex justify-center items-center">
+    <div class="md:w-1/2">
+      <tw-card :title="$t('login')">
         <form @submit.prevent="login" @keydown="form.onKeydown($event)">
+
           <!-- Email -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+          <div class="mt-4">
+            <label class="col-md-3 col-form-label text-md-right" for="email">{{ $t('email') }}</label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-input" type="email" name="email" id="email" placeholder="username@example.com" required autocomplete="email">
               <has-error :form="form" field="email" />
             </div>
           </div>
 
           <!-- Password -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
+          <div class="mt-4">
+            <label class="col-md-3 col-form-label text-md-right" for="password">{{ $t('password') }}</label>
             <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
+              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-input" type="password" name="password" id="password" required autocomplete="current-password">
               <has-error :form="form" field="password" />
             </div>
           </div>
 
           <!-- Remember Me -->
-          <div class="form-group row">
-            <div class="col-md-3" />
-            <div class="col-md-7 d-flex">
-              <checkbox v-model="remember" name="remember">
-                {{ $t('remember_me') }}
-              </checkbox>
-
-              <router-link :to="{ name: 'password.request' }" class="small ml-auto my-auto">
-                {{ $t('forgot_password') }}
-              </router-link>
+          <div class="mt-4">
+            <div class="flex items-center justify-between">
+              <tw-checkbox v-model="remember" name="remember">{{ $t('remember_me') }}</tw-checkbox>
             </div>
           </div>
 
-          <div class="form-group row">
-            <div class="col-md-7 offset-md-3 d-flex">
-              <!-- Submit Button -->
-              <v-button :loading="form.busy">
-                {{ $t('login') }}
-              </v-button>
+          <div class="mt-4 flex items-center justify-between">
+            <!-- Submit Button -->
+            <v-button :loading="form.busy">{{ $t('login') }}</v-button>
+            <router-link :to="{ name: 'password.request' }" class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker no-underline">
+              {{ $t('forgot_password') }}
+            </router-link>
 
-              <!-- GitHub Login Button -->
-              <login-with-github />
-            </div>
+            <!-- GitHub Login Button -->
+            <login-with-github />
           </div>
+
         </form>
-      </card>
+      </tw-card>
     </div>
   </div>
 </template>

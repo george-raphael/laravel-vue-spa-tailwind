@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="col-lg-8 m-auto">
+  <div class="container mx-auto h-full flex justify-center items-center">
+    <div class="md:w-1/2">
       <card :title="$t('verify_email')">
         <template v-if="success">
           <div class="alert alert-success" role="alert">

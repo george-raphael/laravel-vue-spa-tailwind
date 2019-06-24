@@ -1,10 +1,6 @@
 # Laravel-Vue SPA 
 
-<a href="https://travis-ci.org/cretueusebiu/laravel-vue-spa"><img src="https://travis-ci.org/cretueusebiu/laravel-vue-spa.svg?branch=master" alt="Build Status"></a>
-<a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/cretueusebiu/laravel-vue-spa/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/cretueusebiu/laravel-vue-spa/v/stable.svg" alt="Latest Stable Version"></a>
-
-> A Laravel-Vue SPA starter project template.
+> A Laravel-Vue SPA starter project template. Forked from [cretueusebiu/laravel-vue-spa](https://github.com/cretueusebiu/laravel-vue-spa)
 
 <p align="center">
 <img src="https://i.imgur.com/NHFTsGt.png">
@@ -18,11 +14,11 @@
 - Login, register, email verification and password reset
 - Authentication with JWT
 - Socialite integration
-- Bootstrap 4 + Font Awesome 5
+- [Tailwind CSS](https://tailwindcss.com/) + Font Awesome 5
 
 ## Installation
 
-- `composer create-project --prefer-dist cretueusebiu/laravel-vue-spa`
+- `composer create-project --prefer-dist shriker/laravel-vue-spa-tailwind`
 - Edit `.env` and set your database connection details
 - (When installed via git clone or download, run `php artisan key:generate` and `php artisan jwt:secret`)
 - `php artisan migrate`

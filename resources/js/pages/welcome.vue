@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-screen">
     <div class="top-right links">
       <template v-if="authenticated">
         <router-link :to="{ name: 'home' }">
@@ -16,13 +16,14 @@
       </template>
     </div>
 
-    <div class="text-center">
-      <div class="title mb-4">
-        {{ title }}
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/cretueusebiu/laravel-vue-spa">github.com/cretueusebiu/laravel-vue-spa</a>
+    <div class="container mx-auto h-full flex justify-center items-center">
+      <div class="w-1/3">
+        <div class="title text-center">
+          {{ title }}
+        </div>
+        <div class="font-hairline text-center">
+          <a href="https://github.com/shriker/laravel-vue-spa-tailwind">shriker/laravel-vue-spa-tailwind</a>
+        </div>
       </div>
     </div>
   </div>

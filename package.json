@@ -16,8 +16,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.8.1",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/vue-fontawesome": "^0.1.6",
-    "axios": "^0.18.1",
-    "bootstrap": "^4.3.1",
+    "axios": "^0.18.0",
     "jquery": "^3.4.1",
     "js-cookie": "^2.2.0",
     "popper.js": "^1.15.0",
@@ -44,9 +43,13 @@
     "eslint-plugin-vue": "^5.2.2",
     "laravel-mix": "^4.0.15",
     "laravel-mix-versionhash": "^1.0.7",
+    "laravel-mix-purgecss": "^4.1.0",
     "resolve-url-loader": "^2.3.1",
     "sass": "^1.20.1",
     "sass-loader": "^7.1.0",
+    "normalize.css": "^8.0.1",
+    "tailwindcss": "^1.0.4",
+    "@tailwindcss/custom-forms": "^0.2.0",
     "vue-template-compiler": "^2.6.10",
     "webpack-bundle-analyzer": "^3.3.2"
   }
