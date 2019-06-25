@@ -15,8 +15,18 @@ class PasswordController extends Controller
      */
     public function update(Request $request)
     {
+        $user = auth()->user();
+
         $this->validate($request, [
-            'password' => 'required|confirmed|min:6',
+            'old_password' => [
+                'required',
+                function ($attribute, $value, $fail) use ($user) {
+                    if (!\Hash::check($value, $user->password)) {
+                        $fail(__('validation.confirmed'));
+                    }
+                }
+            ],
+            'password' => 'required|confirmed|min:6|different:old_password',
         ]);
 
         $request->user()->update([

@@ -1,27 +1,25 @@
 <template>
-  <div class="container mx-auto h-full flex justify-center items-center">
-    <div class="md:w-1/2">
-      <card :title="$t('verify_email')">
-        <template v-if="success">
-          <div class="alert alert-success" role="alert">
-            {{ success }}
-          </div>
+  <div class="container mx-auto flex justify-center items-center">
+    <tw-card :title="$t('verify_email')">
+      <template v-if="success">
+        <div class="alert alert-success" role="alert">
+          {{ success }}
+        </div>
 
-          <router-link :to="{ name: 'login' }" class="btn btn-primary">
-            {{ $t('login') }}
-          </router-link>
-        </template>
-        <template v-else>
-          <div class="alert alert-danger" role="alert">
-            {{ error || $t('failed_to_verify_email') }}
-          </div>
+        <router-link :to="{ name: 'login' }" class="btn btn-primary">
+          {{ $t('login') }}
+        </router-link>
+      </template>
+      <template v-else>
+        <div class="alert alert-danger" role="alert">
+          {{ error || $t('failed_to_verify_email') }}
+        </div>
 
-          <router-link :to="{ name: 'verification.resend' }" class="small float-right">
-            {{ $t('resend_verification_link') }}
-          </router-link>
-        </template>
-      </card>
-    </div>
+        <router-link :to="{ name: 'verification.resend' }" class="small float-right">
+          {{ $t('resend_verification_link') }}
+        </router-link>
+      </template>
+    </tw-card>
   </div>
 </template>
 

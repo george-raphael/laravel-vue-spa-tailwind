@@ -1,7 +1,9 @@
 <template>
-  <card :title="$t('home')">
-    {{ $t('you_are_logged_in') }}
-  </card>
+  <div class="container mx-auto">
+    <tw-card :title="$t('home')">
+      {{ $t('you_are_logged_in') }}
+    </tw-card>
+  </div>
 </template>
 
 <script>

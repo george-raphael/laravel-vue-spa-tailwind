@@ -1,10 +1,9 @@
 <template>
   <div class="main-layout">
     <tw-navbar />
-
-    <div class="container mt-4">
+    <main>
       <child />
-    </div>
+    </main>
     <locale-switcher />
   </div>
 </template>
