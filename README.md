@@ -1,14 +1,14 @@
-# Laravel-Vue SPA 
+# Laravel-Vue SPA + Tailwind CSS
 
-> A Laravel-Vue SPA starter project template. Forked from [cretueusebiu/laravel-vue-spa](https://github.com/cretueusebiu/laravel-vue-spa)
+> Forked from [cretueusebiu/laravel-vue-spa](https://github.com/cretueusebiu/laravel-vue-spa)
 
-<p align="center">
-<img src="https://i.imgur.com/NHFTsGt.png">
-</p>
+The main difference between this repository and the original is that this one uses Tailwind CSS instead of Bootstrap.
+
+![Image of Laravel-Vue SPA + Tailwind CSS](https://repository-images.githubusercontent.com/193556327/a1d35f80-9746-11e9-884b-6b1fa8318cfb)
 
 ## Features
 
-- Laravel 5.8 
+- [Laravel 5.8](https://laravel.com/docs/5.8) 
 - Vue + VueRouter + Vuex + VueI18n + ESlint
 - Pages with dynamic import and custom layouts
 - Login, register, email verification and password reset
