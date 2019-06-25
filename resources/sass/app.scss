@@ -7,17 +7,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'tailwind/alerts';
 @import 'tailwind/buttons';
 @import 'tailwind/nav';
 @import 'elements/transitions';
-
-@screen md {
-  form {
-    .form-group {
-      @apply flex items-center;
-    }
-  }
-}
 
 label {
   @apply text-gray-700 font-bold mb-2;
