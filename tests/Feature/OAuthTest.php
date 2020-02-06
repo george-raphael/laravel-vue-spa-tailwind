@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Support\Str;
 use App\User;
 use Illuminate\Foundation\Testing\TestResponse;
 use Laravel\Socialite\Facades\Socialite;
@@ -17,13 +18,13 @@ class OAuthTest extends TestCase
         parent::setUp();
 
         TestResponse::macro('assertText', function ($text) {
-            PHPUnit::assertTrue(str_contains($this->getContent(), $text), "Expected text [{$text}] not found.");
+            PHPUnit::assertTrue(Str::contains($this->getContent(), $text), "Expected text [{$text}] not found.");
 
             return $this;
         });
 
         TestResponse::macro('assertTextMissing', function ($text) {
-            PHPUnit::assertFalse(str_contains($this->getContent(), $text), "Expected missing text [{$text}] found.");
+            PHPUnit::assertFalse(Str::contains($this->getContent(), $text), "Expected missing text [{$text}] found.");
 
             return $this;
         });
