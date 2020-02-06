@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Settings;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class PasswordController extends Controller
 {
@@ -21,10 +21,10 @@ class PasswordController extends Controller
             'old_password' => [
                 'required',
                 function ($attribute, $value, $fail) use ($user) {
-                    if (!\Hash::check($value, $user->password)) {
+                    if (! \Hash::check($value, $user->password)) {
                         $fail(__('validation.confirmed'));
                     }
-                }
+                },
             ],
             'password' => 'required|confirmed|min:6|different:old_password',
         ]);
