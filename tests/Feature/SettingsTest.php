@@ -11,7 +11,7 @@ class SettingsTest extends TestCase
     /** @var \App\User */
     protected $user;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 

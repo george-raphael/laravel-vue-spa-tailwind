@@ -9,7 +9,7 @@ use Tests\DuskTestCase;
 
 class RegisterTest extends DuskTestCase
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setup();
 
